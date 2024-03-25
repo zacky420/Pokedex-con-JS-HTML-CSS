@@ -1,7 +1,14 @@
+pokenombre = document.getElementsByClassName("PokeName")
+
 let API_URL = "https://pokeapi.co/api/v2/pokemon/";
 
 fetch(API_URL)
-  .then(response => response.json())
-  .then(data => console.log(data));
-
+  .then(res => res.json())
+  .then(data => { console.log(data);
   
+  let pokename = data.results[0]
+  console.log(pokename)
+  
+})
+    
+
