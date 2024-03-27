@@ -1,8 +1,8 @@
-pokenombre = document.getElementsByClassName("PokeName");
-poketype1= document.getElementsByClassName("poketype1");
-poketype2= document.getElementsByClassName("poketype2");
-Pokecode = document.getElementsByClassName("PokeCode")
-pokeimg= document.getElementsByClassName("PokImg")
+let pokenombre = document.getElementsByClassName("PokeName");
+let poketype1= document.getElementsByClassName("poketype1");
+let poketype2= document.getElementsByClassName("poketype2");
+let Pokecode = document.getElementsByClassName("PokeCode")
+let pokeimg= document.getElementsByClassName("PokImg")
 
 
 
