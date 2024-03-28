@@ -1,53 +1,133 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 
 :root {
-    --clr-black: #1c1c1c;
-    --clr-gray: #ececec;
-    --clr-white: #f7f7f7;
+  --clr-black: #1c1c1c;
+  --clr-gray: #ececec;
+  --clr-white: #f7f7f7;
 
-    --type-normal: #A8A878;
-    --type-fire: #F08030;
-    --type-water: #6890F0;
-    --type-grass: #78C850;
-    --type-electric: #F8D030;
-    --type-ice: #98D8D8;
-    --type-fighting: #C03028;
-    --type-poison: #A040A0;
-    --type-ground: #E0C068;
-    --type-flying: #A890F0;
-    --type-psychic: #F85888;
-    --type-bug: #A8B820;
-    --type-rock: #B8A038;
-    --type-ghost: #705898;
-    --type-dark: #705848;
-    --type-dragon: #7038F8;
-    --type-steel: #B8B8D0;
-    --type-fairy: #F0B6BC;
+  --type-normal: #a8a878;
+  --type-fire: #f08030;
+  --type-water: #6890f0;
+  --type-grass: #78c850;
+  --type-electric: #f8d030;
+  --type-ice: #98d8d8;
+  --type-fighting: #c03028;
+  --type-poison: #a040a0;
+  --type-ground: #e0c068;
+  --type-flying: #a890f0;
+  --type-psychic: #f85888;
+  --type-bug: #a8b820;
+  --type-rock: #b8a038;
+  --type-ghost: #705898;
+  --type-dark: #705848;
+  --type-dragon: #7038f8;
+  --type-steel: #b8b8d0;
+  --type-fairy: #f0b6bc;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: var(--clr-black);
-    font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--clr-black);
+  font-family: "Rubik", sans-serif;
 }
 
 .btn-header {
   background-color: var(--clr-gray);
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 100vmax;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 600;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, .25);
-  transition: .2s;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+  transition: 0.2s;
 }
 
 .btn-header:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
 }
+
+
+.btn-header.normal {
+  background-color: var(--type-normal);
+}
+
+.btn-header.fire {
+  background-color: var(--type-fire);
+}
+
+.btn-header.water {
+  background-color: var(--type-water);
+}
+
+.btn-header.grass {
+  background-color: var(--type-grass);
+}
+
+.btn-header.electric {
+  background-color: var(--type-electric);
+}
+
+.btn-header.ice {
+  background-color: var(--type-ice);
+}
+
+.btn-header.fighting {
+  background-color: var(--type-fighting);
+}
+
+.btn-header.poison {
+  background-color: var(--type-poison);
+}
+
+.btn-header.ground {
+  background-color: var(--type-ground);
+}
+
+.btn-header.flying {
+  background-color: var(--type-flying);
+}
+
+.btn-header.psychic {
+  background-color: var(--type-psychic);
+}
+
+.btn-header.bug {
+  background-color: var(--type-bug);
+}
+
+.btn-header.rock {
+  background-color: var(--type-rock);
+}
+
+.btn-header.ghost {
+  background-color: var(--type-ghost);
+}
+
+.btn-header.dark {
+  background-color: var(--type-dark);
+}
+
+.btn-header.dragon {
+  background-color: var(--type-dragon);
+}
+
+.btn-header.steel {
+  background-color: var(--type-steel);
+}
+
+.btn-header.fairy {
+  background-color: var(--type-fairy);
+}
+
+
+
+
+
+
+
 
 main {
   padding: 2rem;
@@ -55,101 +135,96 @@ main {
   margin: 0 auto;
 }
 
-body{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 17px;
-    text-align: center;
-    background-color: var(--clr-gray);
-
+body {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 17px;
+  text-align: center;
+  background-color: var(--clr-gray);
 }
 
-h1 { 
-    font-size: 30px;
+h1 {
+  font-size: 30px;
 }
-.ElementNav ul{
-  display:flex;
+.ElementNav ul {
+  display: flex;
   align-items: center;
-    list-style: none;
-flex-wrap: wrap;
-gap: .5rem;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.ElementNav{
+.ElementNav {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
   flex-direction: column;
-    
 }
-
-
 
 /* Estilos para las tarjetas de Pokémon */
 .AllCards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .card {
-    margin: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card-img-top {
-    width: 100%;
-    height: auto;
-  }
-  
-  .card-body {
-    padding: 20px;
-  }
-  
-  .card-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .card-subtitle {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 5px;
-  }
-  
-  .PokeTypes {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .PokeTypes li {
-    display: inline-block;
-    margin-right: 5px;
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    background-color: #f2f2f2;
-    color: #333;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-  @media screen and (min-width: 470px) {
-    .AllCards {
-        grid-template-columns: 1fr 1fr;
-    }
+.card {
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.PokeTypes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.PokeTypes li {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+@media screen and (min-width: 470px) {
+  .AllCards {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (min-width: 700px) {
-    .AllCards {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+  .AllCards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
