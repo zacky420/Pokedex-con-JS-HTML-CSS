@@ -1,4 +1,4 @@
-let API_URL = "https://pokeapi.co/api/v2/pokemon/?offset=1302&limit=1302";
+let API_URL = "https://pokeapi.co/api/v2/pokemon/?limit=1302";
 let container = document.querySelector(".AllCards");
 
 fetch(API_URL)
@@ -65,37 +65,40 @@ fetch(API_URL)
               document.documentElement
             ).getPropertyValue(`--type-${Poktype2}`);
           }
+
+          
         });
     });
   });
 
-document.querySelectorAll(".btn-header").forEach((button) => {
-  button.addEventListener("click", () => {
-    let type = button.id;
-    let allCards = document.querySelectorAll(".Pokecard");
+document.querySelectorAll('.btn-header').forEach(button => {
+    button.addEventListener('click', () => {
+        let type = button.id;
+        let allCards = document.querySelectorAll('.Pokecard');
 
-    allCards.forEach((card) => {
-      let types = card.querySelectorAll(".PokeTypes li");
-      let match = false;
+        allCards.forEach(card => {
+            let types = card.querySelectorAll('.PokeTypes li');
+            let match = false;
+            
+            types.forEach(typeElement => {
+                if (typeElement.textContent.toLowerCase() === type.toLowerCase()) {
+                    match = true;
+                }
+            });
 
-      types.forEach((typeElement) => {
-        if (typeElement.textContent.toLowerCase() === type.toLowerCase()) {
-          match = true;
-        }
-      });
-
-      if (match) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
+            if (match) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
     });
-  });
 });
 
-document.querySelector("#ver-todos").addEventListener("click", () => {
-  let allCards = document.querySelectorAll(".Pokecard");
-  allCards.forEach((card) => {
-    card.style.display = "block";
+
+document.querySelector('#ver-todos').addEventListener('click', () => {
+  let allCards = document.querySelectorAll('.Pokecard');
+  allCards.forEach(card => {
+      card.style.display = 'block';
   });
 });
