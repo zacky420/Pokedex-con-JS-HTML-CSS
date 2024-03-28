@@ -49,7 +49,6 @@
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
 }
 
-
 .btn-header.normal {
   background-color: var(--type-normal);
 }
@@ -121,13 +120,6 @@
 .btn-header.fairy {
   background-color: var(--type-fairy);
 }
-
-
-
-
-
-
-
 
 main {
   padding: 2rem;
